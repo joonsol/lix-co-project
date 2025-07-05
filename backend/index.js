@@ -16,7 +16,7 @@ const uploadRoutes = require('./routes/upload')
 app.use(cors({
     origin: [
         "http://localhost:5173",
-        "https://sage-marshmallow-edfe04.netlify.app"
+        "https://lix-co-project.vercel.app/"
     ],
     credentials: true
 }))
