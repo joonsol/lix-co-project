@@ -14,14 +14,12 @@ const postRoutes = require('./routes/post')
 const uploadRoutes = require('./routes/upload')
 
 app.use(cors({
-    origin: [
-              "https://lix-co-project.vercel.app/"
-    ],
+    origin: "https://lix-co-project.vercel.app/",
     credentials: true
 }))
 app.use(express.json())
 app.use(express.urlencoded({
-    extended:true
+    extended: true
 }))
 app.use(cookieParser())
 
