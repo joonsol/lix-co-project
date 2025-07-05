@@ -1,0 +1,207 @@
+.create-post-wrapper {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 1rem;
+
+  @media (min-width: 640px) {
+    padding: 2rem;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 2rem 3rem;
+  }
+}
+
+.create-post-container {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+
+  @media (min-width: 640px) {
+    padding: 2rem;
+  }
+}
+
+.create-post-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #1f2937;
+
+  @media (min-width: 640px) {
+    font-size: 1.875rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.form-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  @media (min-width: 640px) {
+    gap: 2rem;
+  }
+}
+
+.input-label {
+  display: block;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.text-input {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  outline: none;
+
+  &:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 1px #6366f1;
+  }
+
+  @media (min-width: 640px) {
+    padding: 0.75rem;
+    font-size: 1.125rem;
+  }
+}
+
+.file-input {
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  color: #6b7280;
+  cursor: pointer;
+
+  &::file-selector-button {
+    margin-right: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #eef2ff;
+    color: #4338ca;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.5rem;
+
+    &:hover {
+      background-color: #e0e7ff;
+    }
+
+    @media (min-width: 640px) {
+      margin-right: 1rem;
+      padding: 0.75rem 1.5rem;
+    }
+  }
+}
+
+.file-list {
+  margin-top: 1rem;
+}
+
+.file-list-title {
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.file-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background-color: #f9fafb;
+  border-top: 1px solid #e5e7eb;
+
+  &:first-child {
+    border-top: none;
+  }
+}
+
+.file-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.file-icon,
+.file-delete-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #9ca3af;
+}
+
+.file-name {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.file-size {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  color: #dc2626;
+  cursor: pointer;
+
+  &:hover {
+    color: #b91c1c;
+  }
+}
+
+.form-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 2rem;
+
+  @media (min-width: 640px) {
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+}
+
+.save-button,
+.cancel-button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+
+  @media (min-width: 640px) {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.125rem;
+  }
+}
+
+.save-button {
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+
+  &:hover {
+    background-color: #4338ca;
+  }
+}
+
+.cancel-button {
+  background-color: white;
+  color: #374151;
+  border: 2px solid #d1d5db;
+
+  &:hover {
+    background-color: #f9fafb;
+  }
+}

@@ -1,0 +1,216 @@
+.admin-contacts {
+  padding: 50px 20px;
+
+  .inner {
+    .controls {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin: 1.5rem 0;
+
+      @media (min-width: 768px) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .filters {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        @media (min-width: 768px) {
+          flex-direction: row;
+          align-items: center;
+          flex: 1;
+        }
+
+        select,
+        input {
+          padding: 0.5rem 0.75rem;
+          border: 1px solid #d1d5db;
+          border-radius: 0.375rem;
+          font-size: 1.1rem;
+          transition: border-color 0.2s ease-in-out;
+
+          &:focus {
+            border-color: #3b82f6;
+            outline: none;
+          }
+        }
+
+        input {
+          flex: 1;
+          min-width: 300px;
+          max-width: 400px;
+        }
+      }
+
+      .pagination-size {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        label {
+          font-weight: 600;
+          color: #4b5563;
+        }
+
+        select {
+          padding: 0.5rem 0.75rem;
+          border: 1px solid #d1d5db;
+          border-radius: 0.375rem;
+          font-size: 0.95rem;
+
+          &:focus {
+            border-color: #3b82f6;
+            outline: none;
+          }
+        }
+      }
+    }
+
+    .contact-list {
+      width: 100%;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      border: 1px solid #e5e7eb;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      font-size: 1.1rem;
+
+      // 공통 column flex 설정
+      .col {
+        padding: 0 0.5rem;
+
+        &.no {
+          flex: 0.5;
+        }
+        &.name {
+          flex: 1.2;
+        }
+        &.email {
+          flex: 1.5;
+        }
+        &.phone {
+          flex: 1.5;
+        }
+        &.message {
+          flex: 2;
+          min-width: 200px;
+        }
+        &.status {
+          flex: 1;
+          text-align: center;
+        }
+        &.actions {
+          flex: 1;
+          display: flex;
+          justify-content: center;
+          gap: 0.5rem;
+        }
+      }
+
+      .contact-header {
+        display: flex;
+        background-color: #f3f4f6;
+        font-weight: bold;
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid #e5e7eb;
+      }
+
+      .contact-row {
+        display: flex;
+        align-items: center;
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid #f3f4f6;
+        background-color: white;
+
+        .status {
+          padding: 0.25rem 0.5rem;
+          border-radius: 9999px;
+          font-size: 0.875rem;
+          white-space: nowrap;
+
+          &.pending {
+            background-color: #dbeafe;
+            color: #1e3a8a;
+          }
+
+          &.in-progress {
+            background-color: #fef3c7;
+            color: #92400e;
+          }
+
+          &.completed {
+            background-color: #d1fae5;
+            color: #065f46;
+          }
+        }
+
+        .actions {
+          button {
+            padding: 0.375rem 0.75rem;
+            border-radius: 0.375rem;
+            color: white;
+            font-weight: 600;
+
+            &.edit {
+              background: #3b82f6;
+              &:hover {
+                background: #2563eb;
+              }
+            }
+
+            &.delete {
+              background: #ef4444;
+              &:hover {
+                background: #dc2626;
+              }
+            }
+          }
+        }
+
+        &:hover {
+          background-color: #f9fafb;
+        }
+      }
+    }
+
+    .pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 1.5rem;
+
+      button {
+        padding: 0.5rem 1rem;
+        border: 1px solid #d1d5db;
+        border-radius: 0.375rem;
+        background-color: white;
+        color: #374151;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.2s, color 0.2s;
+
+        &:hover:not(:disabled) {
+          background-color: #3b82f6;
+          color: white;
+          border-color: #3b82f6;
+        }
+
+        &:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
+      }
+
+      span {
+        font-weight: bold;
+        font-size: 1rem;
+      }
+    }
+  }
+}

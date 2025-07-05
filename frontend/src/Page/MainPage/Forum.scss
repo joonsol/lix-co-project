@@ -1,0 +1,159 @@
+/* 변수 · 믹스인 공유용 import (선택) */
+// @use "../styles/variables" as *;
+
+.forum {
+  background: #fff;
+  padding: 7rem;
+
+  @media (max-width: 768px) {
+    padding: 4rem 2rem;
+  }
+
+  .inner {
+    max-width: 118rem;
+    margin: 0 auto;
+  }
+
+  .forum-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    width: 100%;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    span {
+      font-size: 1.4rem;
+
+      @media (max-width: 768px) {
+        font-size: 1.3rem;
+      }
+    }
+
+    .forum-more {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      color: #1f2937;
+      background: #fff;
+      border: 1px solid #e5e7eb; // gray-200
+      border-radius: 1rem;
+      transition: background 0.3s;
+
+      &:hover {
+        background: #f3f4f6; // gray-100
+      }
+
+      @media (max-width: 768px) {
+        font-size: 1.1rem;
+        padding: 0.8rem 1.5rem;
+      }
+    }
+  }
+
+  .forum-list {
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  }
+
+  .forum-item {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid #f3f4f6;
+    transition: background 0.3s;
+    cursor: pointer;
+
+    > * {
+      flex: 1;
+    }
+
+    &:hover {
+      background: #fdf1cb;
+    }
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .forum-meta {
+      display: flex;
+      gap: 1rem;
+      font-size: 1.2rem;
+      color: #6b7280;
+      margin-bottom: 0.5rem;
+
+      @media (max-width: 768px) {
+        font-size: 1.1rem;
+        flex-wrap: wrap;
+      }
+    }
+
+    .forum-item-title {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #374151;
+      margin-bottom: 0.25rem;
+      min-width: 30rem;
+      flex: 3;
+
+      &:hover {
+        color: #2563eb;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 1.4rem;
+        min-width: 100%;
+      }
+    }
+
+    .forum-date {
+      font-size: 1.3rem;
+      color: #6b7280;
+      max-width: 10%;
+
+      @media (max-width: 768px) {
+        font-size: 1.1rem;
+        max-width: 100%;
+      }
+    }
+  }
+
+  .forum-empty {
+    padding: 2rem;
+    text-align: center;
+    color: #6b7280;
+
+    @media (max-width: 768px) {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.icon--arrow {
+  max-width: 10%;
+  width: 1.25rem;
+  height: 1.25rem;
+  mask: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23000'%3e%3cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 5l7 7-7 7'/%3e%3c/svg%3e")
+    no-repeat center / contain;
+  background: currentColor;
+
+  @media (max-width: 768px) {
+    width: 1rem;
+    height: 1rem;
+  }
+}

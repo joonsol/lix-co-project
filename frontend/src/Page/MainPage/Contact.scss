@@ -1,0 +1,112 @@
+/* src/Components/Contact/Contact.scss */
+
+.contact {
+  background-color: white;
+  padding: 5rem 0;
+
+  @media (min-width: 1024px) {
+    padding: 10rem 0;
+  }
+
+  .inner {
+    max-width: 120rem;
+    padding: 0 1rem;
+    
+}
+
+  .contact-header {
+    text-align: center;
+    margin-bottom: 6rem;
+    
+    h2 {
+        font-size: 2.25rem;
+      font-weight: bold;
+      color: #1f2937;
+      
+      @media (min-width: 1024px) {
+          font-size: 3rem;
+        }
+    }
+    
+    p {
+        color: #4b5563;
+    }
+  }
+
+  .contact-grid {
+      display: grid;
+      gap: 5rem;
+    margin-bottom: 5rem;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .contact-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+      text-align: center;
+      transition: box-shadow 0.3s;
+
+      &:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      }
+
+      h3 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .info {
+        color: #4b5563;
+        margin: 2rem 0;
+        font-size: 1.6rem;
+    }
+    
+    .sub {
+          font-size: 1.4rem;
+        color: #6b7280;
+      }
+    }
+  }
+
+  .contact-map {
+    margin: 10rem auto;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+
+    iframe {
+      width: 100%;
+      height: 400px;
+
+      @media (min-width: 768px) {
+        height: 600px;
+      }
+    }
+  }
+
+  .contact-button {
+    margin-top: 3rem;
+    text-align: center;
+
+    a {
+      display: inline-block;
+      padding:1rem 3rem;
+      font-size: 2rem;
+      font-weight: 500;
+      color: white;
+      background-color: #f37c45;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s, box-shadow 0.3s;
+
+      &:hover {
+        background-color:#ff6f2c;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+}
