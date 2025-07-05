@@ -14,8 +14,11 @@ const postRoutes = require('./routes/post')
 const uploadRoutes = require('./routes/upload')
 
 app.use(cors({
-    origin: "https://lix-co-project.vercel.app/",
-    credentials: true
+  origin: [
+    "http://localhost:5173",
+    "https://lix-co-project.vercel.app"  // 여기가 꼭 있어야 함!
+  ],
+  credentials: true
 }))
 app.use(express.json())
 app.use(express.urlencoded({
