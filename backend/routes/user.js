@@ -88,7 +88,7 @@ router.post("/login", async (req, res) => {
     res.cookie('token', token, {
       httpOnly: true,
       secure: true,             // ✅ 배포 환경이면 true
-      sameSite: 'None',         // ✅ 반드시 'None'
+      sameSite: 'none',         // ✅ 반드시 'None'
       maxAge: 24 * 60 * 60 * 1000
     })
 
